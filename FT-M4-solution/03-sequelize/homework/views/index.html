@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <h3>Pages</h3>
+  <hr>
+  <ul class="list-unstyled">
+    {% for page in pages %}
+      <a href="{{page.route}}">
+        <h3>{{page.title}}</h3>
+      </a>
+      <h4>Categories</h4>
+      {% for category in page.categories %}
+        <p>{{category.name}}</p>
+      {% endfor %}
+    {% endfor %}
+  </ul>
+{% endblock %}

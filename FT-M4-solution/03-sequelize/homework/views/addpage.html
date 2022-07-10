@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <h3>Add a Page</h3>
+  <hr>
+  <form method="POST" action="/pages/">
+
+    <div class="form-group">
+      <label for="name" class="col-sm-2 control-label">Author</label>
+      <div class="col-sm-10">
+        <input name="authorName" type="text" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email" class="col-sm-2 control-label">Author Email</label>
+      <div class="col-sm-10">
+        <input name="authorEmail" type="text" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="title" class="col-sm-2 control-label">Page Title</label>
+      <div class="col-sm-10">
+        <input name="title" type="text" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="content" class="col-sm-2 control-label">Content</label>
+      <div class="col-sm-10">
+        <textarea name="content" class="form-control"></textarea>
+      </div>
+    </div>
+    <div class="form-group">
+      <p>
+        Categorias:<br>
+        <label><input type="checkbox" name="categories" value="1"> Autos</label><br>
+        <label><input type="checkbox" name="categories" value="2"> Deportes</label><br>
+        <label><input type="checkbox" name="categories" value="3"> Videojuegos</label>
+      </p>
+    </div>
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-primary" style="margin-top:10px; float:right;">SUBMIT</button>
+    </div>
+
+  </form>
+{% endblock %}
